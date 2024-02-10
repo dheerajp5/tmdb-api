@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Call and List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-800 w-[100vw] overflow-x-hidden">
+    <div
+        class="flex items-center px-4 bg-slate-600/50 h-[50px] text-emerald-500 text-3xl leading-5 font-bold shadow-md rounded-xl">
+        BRAND
+    </div>
+
+
+
+    <div id="" class=" max-w-[90%] mx-auto  text-neutral-300">
+        <div>
+            <h3 class="text-2xl font-semibold my-4">Popular</h3>
+
+            <div id="popular" class="grid grid-cols-4 gap-4">
+            </div>
+        </div>
+
+
+        <div class="my-5 bg-gradient-to-l from-slate-700 to-slate-9000   text-neutral-100 rounded-xl shadow-lg">
+            <div class="h-[300px] flex items-center justify-center gap-5">
+                <h2 class="text-4xl font-semibold my-4">Can't Find Your <span class="text-red-500">Movie</span></h2>
+            <input onchange="onInput(this)" class="w-[60%] h-[70px] rounded-xl focus:outline-none bg-transparent border text-2xl font-weight-bold px-3" placeholder="Search" type="text" autofocus >
+            </div>
+            <div id="search" class="grid grid-cols-4 gap-4">
+
+            </div>
+        </div>
+
+
+        <div class="mt-4">
+            <h3 class="text-2xl font-semibold my-4">Top Rated</h3>
+
+            <div id="top_rated" class="grid grid-cols-4 gap-4">
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="js/utill.js"></script>
+    <script src="js/handler.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
