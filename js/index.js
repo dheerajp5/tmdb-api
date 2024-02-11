@@ -1,4 +1,4 @@
-const apiKey = 'your api key'   // get api key from https://api.themoviedb.org
+const apiKey = `16356dbe4a1f54135a1f22a226ddaf68`;   // get api key from https://api.themoviedb.org
 let collection ='popular';
 let page =1;
 const urlPrefix = `https://api.themoviedb.org/3/movie/`;

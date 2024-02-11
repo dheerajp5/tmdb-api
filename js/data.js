@@ -1,16 +1,17 @@
-const cardDivStyle = 'w-[255px] border-slate-700 hover:border px-2 py-6 bg-slate-900/50 hover:bg-slate-900/20 rounded-xl hover:shadow-xl transition duration-150 ease-in hover:ease-out'
-const cardImgStyle = 'w-[170px] hover:scale-105 mx-auto transition duration-200 ease-in hover:ease-out'
-const cardTitleStyle = 'mt-2 text-lg font-bold'
+const cardDivStyle = 'w-[255px] border-slate-700 hover:border px-2 py-6 bg-slate-900/50 hover:bg-slate-900/20 rounded-xl hover:shadow-xl transition duration-150 ease-in hover:ease-out';
+const cardImgStyle = 'w-[170px] hover:scale-105 mx-auto transition duration-200 ease-in hover:ease-out';
+const cardTitleStyle = 'mt-2 text-lg font-bold';
 const cardBodyStyle = 'mt-3 text-md font-medium text-neutral-400 ';
 
 const imgBaseUrl = 'http://image.tmdb.org/t/p/';
 const imgSize = 'w185';
-const imageFullUrl = `${imgBaseUrl}${imgSize}/`
+const imageFullUrl = `${imgBaseUrl}${imgSize}/`;
 
 
-function addDataToDOM(data, parentID , start = 0, end = null) {
+async function addDataToDOM(data, parentID , start = 0, end = null) {
     const parent = document.getElementById(parentID);
-    console.log(data[0]);
+   
+    removeAllChild(parent);
     for (let i = 0; i < (!end?data.length:end); i++) {
 
         const src = `${imageFullUrl}${data[i].poster_path}`;
@@ -29,3 +30,8 @@ function addDataToDOM(data, parentID , start = 0, end = null) {
         parent.appendChild(cardDiv);
     }
 }
+
+function removeAllChild(parent) {
+    parent.replaceChildren();
+}
+
